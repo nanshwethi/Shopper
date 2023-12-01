@@ -1,0 +1,913 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700;800;900&display=swap');
+@import '../node_modules/bootstrap-icons/font/bootstrap-icons.min.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root{
+    --bs-secondary: #a6a6a6;
+    --bs-success: #28bb74;
+    --bs-info: #3b86ff;
+    --bs-warning: #ff9736;
+    --bs-danger: #E66457;
+    --bs-gray: #3e3e3e;
+    --bs-gray-dark: #2b2b2b;
+    --bs-gray-100: #e5e5e5;
+    --bs-gray-200: #d8d8d8;
+    --bs-gray-300: #bababa;
+    --bs-gray-400: #909090;
+    --bs-gray-500: #525252;
+    --bs-gray-600: #3e3e3e;
+    --bs-gray-700: #303030;
+    --bs-gray-800: #2b2b2b;
+    --bs-gray-900: #1f1f1f;
+}
+
+// Custom.scss
+// Option B: Include parts of Bootstrap
+// 1. Include functions first (so you can manipulate colors, SVGs, calc, etc)
+@import "../node_modules/bootstrap/scss/functions";
+// 2. Include any default variable overrides here
+// 3. Include remainder of required Bootstrap stylesheets (including any separate color mode stylesheets)
+
+$font-family-sans-serif : "Jost"; 
+$primary : #B0BAB0;
+$secondary : #a6a6a6;
+$success : #28bb74;
+$info : #3b86ff;
+$warning : #ff9736;
+$danger : #ff6f61;
+$border-radius-lg : none;
+$border-color-translucent : none;
+$modal-inner-padding : 0;
+$modal-content-border-color : none;
+$modal-content-border-radius : none;
+
+
+@import "../node_modules/bootstrap/scss/variables";
+@import "../node_modules/bootstrap/scss/variables-dark";
+// 4. Include any default map overrides here
+// 5. Include remainder of required parts
+
+$theme-colors: (
+//   "primary": $primary,
+    "secondary" : $secondary,
+    "success" : $success,
+    "info" : $info,
+    "warning" : $warning,
+    "danger" : $danger,
+
+);
+
+@import "../node_modules/bootstrap/scss/maps";
+@import "../node_modules/bootstrap/scss/mixins";
+@import "../node_modules/bootstrap/scss/root";
+
+// 6. Optionally include any other parts as needed
+@import "../node_modules/bootstrap/scss/utilities";
+@import "../node_modules/bootstrap/scss/reboot";
+@import "../node_modules/bootstrap/scss/type";
+@import "../node_modules/bootstrap/scss/images";
+@import "../node_modules/bootstrap/scss/containers";
+@import "../node_modules/bootstrap/scss/grid";
+@import "../node_modules/bootstrap/scss/helpers";
+
+// 7. Optionally include utilities API last to generate classes based on the Sass map in `_utilities.scss`
+@import "../node_modules/bootstrap/scss/utilities/api";
+
+// 8. Add additional custom code here
+
+.nav-flex-basic{
+    flex-basis: auto !important;
+}
+
+.nav-flex{
+    display: flex !important;
+}
+
+
+.primary{
+    color:  #ff6f61;
+}
+
+.fs--1{
+    font-size: .8125rem;
+}
+
+.fs-extra-sm {
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.fs--2{
+    font-size: .9375rem;
+}
+
+.pt-7{
+
+    padding-top: 2rem;
+}
+
+.pb-7{
+
+    padding-bottom: 2rem;
+}
+
+.pt-12{
+    padding-top: 6rem;
+}
+
+.mb-10 {
+    margin-bottom: 4rem;
+}
+
+.mb-7 {
+    margin-bottom: 2rem;
+}
+
+.mt-7 {
+    margin-top: 2rem;
+}
+
+.mt-10 {
+    margin-top: 5rem !important;
+    // margin-bottom: 5rem;
+
+}
+
+.py-12{
+
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+}
+
+.py-13{
+
+    padding-top: 7rem;
+    padding-bottom: 7rem;
+}
+
+.fs--1-w{
+    font-weight: 500;
+    letter-spacing: .02em;
+    text-transform: uppercase;
+}
+
+.text-gray-400{
+    color:  #909090;
+}
+
+.text-gray-500 {
+    color: #525252
+}
+
+.hero-1{
+    background-image: url('./img/hero-1.jpg');
+    background-repeat: no-repeat;
+    // transform:  translateX(300%);
+    background-position: 50%;
+    background-size: cover;
+}
+
+.hero-2{
+    background-image: url('./img/hero-2.jpg');
+    background-repeat: no-repeat;
+    // transform:  translateX(300%);
+    background-position: 50%;
+    background-size: cover;
+}
+
+.hero-3{
+    background-image: url('./img/hero-3.jpg');
+    background-repeat: no-repeat;
+    // transform:  translateX(300%);
+    background-position: 50%;
+    background-size: cover;
+}
+
+.pro-1{
+    min-height: 400px;
+    background-image: url('./img/product-1.jpg');
+    background-repeat: no-repeat;
+    transition: 2s ease-in linear;
+    background-position: 50%;
+    background-size: cover;
+}
+
+.pro-2{
+    min-height: 400px;
+    background-image: url('./img/product-2.jpg');
+    background-repeat: no-repeat;
+    transition: 2s ease-in linear;
+    background-position: 50%;
+    background-size: cover;
+    z-index: 1;
+}
+
+.pro-3{
+    min-height: 400px;
+    background-image: url('./img/product-3.jpg');
+    background-repeat: no-repeat;
+    // transform:  translateX(300%);
+    background-position: 50%;
+    background-size: cover;
+}
+
+.pro-4{
+    min-height: 400px;
+    background-image: url('./img/product-4.jpg');
+    background-repeat: no-repeat;
+    // transform:  translateX(300%);
+    background-position: 50%;
+    background-size: cover;
+}
+
+.mb-mn{
+
+    margin-bottom: -70px;
+}
+
+.custom-btn{
+    border: 1px solid transparent;
+    border-radius: 0;
+    color: #1f1f1f;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.5rem;
+    padding: 0.875rem 1.75rem;
+    text-align: center;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+    vertical-align: middle;
+ 
+}
+
+.save{
+
+    width: 96px;
+    height: 96px;
+    border-radius: 50%;
+    background-color: var(--bs-primary);
+    right: 1.25rem;
+    top: 1.25rem;
+    position: absolute;
+    z-index: 2000;
+    
+}
+
+.hover-bg:hover{
+    background-color: rgba(31,31,31,.15)!important;
+}
+
+.bi-arrow-right{
+    transition: all .2s ease-in-out;
+    transition-property: transform;
+}
+
+.hover-bg:hover .link .a .move>.bi-arrow-right {
+    transform: translateX(0.25rem);
+}
+
+.hover-bg-2:hover{
+    background-color: rgba(31,31,31,.15)!important;
+
+}
+
+.hover-bg-2:hover> .link .a .move-2>.bi-arrow-right {
+    transform: translateX(0.25rem);
+}
+
+.hover-bg-3:hover{
+    background-color: rgba(31,31,31,.15)!important;
+
+}
+
+.hover-bg-3:hover .link .a .move-3>.bi-arrow-right {
+    transform: translateX(0.25rem);
+}
+
+.pro-1:hover{
+    transform: translateX(-0.25rem);
+}
+
+.best-card{
+    word-wrap: break-word;
+    background-clip: border-box;
+    background-color: #fff;
+    border: 0 solid hsla(0,0%,7%,.125);
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    position: relative;
+}
+
+.best-card:hover .link a .move>.bi-arrow-right{
+    transform: translateX(0.25rem);
+}
+
+.pro1-bg{
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    transition: all .2s ease-in-out;
+    transition-property: transform;
+    width: calc(100% + 0.25rem);
+}
+
+.sh-card{
+    word-wrap: break-word;
+    background-clip: border-box;
+    background-color: #fff;
+    border: 0 solid hsla(0,0%,7%,.125);
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    position: relative;
+}
+
+.best-card-bg{
+    height: 100%;
+    left: 0;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+.best-card-bg~*{
+    z-index: 1;
+}
+
+.pro-2:hover{
+    transform: translateX(-0.25rem);
+    .ani>.link>.move>.bi-arrow-right{
+        transform: translateX(0.25rem);
+
+    }
+}
+
+
+.pro-3:hover{
+    transform: translateX(-0.25rem);
+    .link>.move>.bi-arrow-right{
+        transform: translateX(0.25rem);
+
+    }
+}
+
+
+.pro-bg{
+    width: calc(100% + 0.25rem);
+    height: 100%;
+    overflow: hidden;
+}
+
+.pro-4:hover{
+    transform: translateX(-0.25rem);
+    .link>.move>.bi-arrow-right{
+        transform: translateX(0.25rem);
+
+    }
+}
+
+.card-badge {
+    position: absolute;
+    top: 1.25rem;
+    z-index: 1;
+}
+
+.sh-nav{
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    padding-left: 0;
+    
+}
+
+.sh-nav-link{
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out;
+    position: relative;
+}
+
+.sh-nav>a{
+
+    text-decoration: none;
+}
+
+.sh-nav>.active{
+    
+    color: var(--bs-primary)!important;
+    
+}
+
+.sh-nav>.active::before{
+
+    border-top: 1px solid #ff6f61;
+    bottom: 0.25rem;
+    content: "";
+    left: 0.75rem;
+    position: absolute;
+    right: 0.75rem;
+}
+
+.sh-card-img-hover .card-img-top{
+    transition: opacity .2s ease-in-out;
+}
+
+.sh-card-img>a{
+    transition: all .1s ease-in-out;
+    transition-property: color;
+}
+
+.sh-card-img-hover .img-back{
+    opacity: 0;
+}
+
+.sh-card-img-hover>*{
+    float: left !important;
+}
+
+.sh-card-img-hover .img-front{
+    margin-left: -100%;
+}
+
+.sh-card-img-hover .card-img-top{
+    width: 100%;
+}
+
+.sh-card-actions{
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    padding: 1.25rem;
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+}
+
+.sh-card-action{
+    left: 0;
+    opacity: 0;
+    position: relative;
+    right: 0;
+    top: 0;
+    transform: translateY(0.5rem);
+    transition: all .1s ease-in-out;
+    transition-property: transform,opacity;
+    
+}
+
+
+.btn-circle{
+    align-items: center;
+    border-radius: 50%;
+    display: inline-flex;
+    justify-content: center;
+    padding: 0;
+    width: calc(2.40625rem + 2px);
+    height: calc(2.40625rem + 2px);
+}
+
+
+.sh-btn-white-primary {
+    background-color: #fff;
+    border: 1px solid transparent;
+}
+
+.sh-btn-white-primary:hover{
+    background-color: var(--bs-primary);
+}
+
+.sh-btn-xs{
+    font-size: .9375rem;
+    line-height: 1.40625rem; 
+    padding: 0.5rem 0.75rem;
+}
+
+.sh-card-img-hover:hover .img-back{
+    opacity: 1;
+    
+}
+
+.sh-card-img-hover:hover .img-front{
+    opacity: 0;
+    
+}
+
+.sh-card-img-hover:hover .sh-card-actions .sh-card-action{
+    opacity: 1;
+    transform: translateX(0px);
+}
+
+.sh-card-actions .sh-card-action::nth-child(2){
+
+    transition-delay: 75ms;
+}
+
+.sh-card-actions .sh-card-action:last-child{
+
+    transition-delay: .15s;
+}
+
+.sh-badge{
+
+    display: inline-block;
+    font-size: .6875em;
+    font-weight: 500;
+    line-height: 1;
+    padding: 0.5em 1em;
+    text-align: center;
+    vertical-align: baseline;
+    white-space: nowrap;
+}
+
+.discover{
+
+    transition: all .1s ease-in-out ;
+
+}
+
+.discover::before{
+
+    border-bottom: 1px solid ;
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    transform-origin: left center;
+    transition: all 0.2s ease-in-out ;
+   
+}
+
+.discover:hover:before{
+    transform-origin: right center;
+    transform: scaleX(0);
+    transition-property: transform;
+}
+
+.count{
+    background-image: url(./img/countDown.jpg);
+    background-repeat: no-repeat;
+    object-fit: fill;
+    background-position: 50%;
+}
+
+.count-btn{
+    background-color: #1f1f1f;
+    transition: transform .5s ease-in;
+}
+
+
+.count-btn:hover .count-arrow{
+    transform: translateX(0.25rem);
+}
+
+.review-card{
+
+    width: 300px;
+    margin: auto;
+
+}
+
+.bg-light{
+    background-color: #F1F1F1;
+}
+
+.action{
+    transition: background-color .2s ease-in-out;
+}
+
+.shopper:hover .action{
+    background-color: rgba(31,31,31,.4) !important;
+}
+
+.overlay{
+    opacity: 0;
+}
+
+.shopper:hover .action>.overlay{
+   opacity: 1 !important;
+}
+
+.fs-small{
+    font-size: 13px;
+}
+
+
+.bg-img1{
+	background-image: url("https://yevgenysim-turkey.github.io/shopper/assets/img/covers/cover-24.jpg");
+	background-size: cover;
+	background-position: bottom left;
+	background-repeat: no-repeat;
+   }
+   .bg-img2{
+	   background-image: url("https://yevgenysim-turkey.github.io/shopper/assets/img/covers/cover-16.jpg");
+	   background-size: cover;
+	   background-position: bottom center;
+	   background-repeat: no-repeat;
+	  }
+   .bg-img3{
+	   background-image: url("	https://yevgenysim-turkey.github.io/shopper/assets/img/covers/cover-29.jpg");
+	   background-size: cover;
+	   background-position: bottom center;
+	   background-repeat: no-repeat;
+	  }
+	  .bg-img4{
+	   background-image: url("	https://yevgenysim-turkey.github.io/shopper/assets/img/covers/cover-30.jpg");
+	   background-size: cover;
+	   background-position: bottom center;
+	   background-repeat: no-repeat;
+	  }
+   .card{
+	  
+	   position: relative;
+	   cursor: pointer;
+   }
+   .card:hover .card-img-front{
+	   visibility: visible;
+   }
+   
+   .card-badge-start {
+	   left: 0;
+   }
+   
+   .card-badge{
+   position: absolute;	
+   top: 1.25rem;
+   z-index: 1;
+   }
+ 
+  
+   
+   .card-img-hover .card-img-front{
+	   position: absolute;
+	   visibility: hidden;
+
+	   top:0;
+	   left: 0;
+   }
+
+ 
+   .cus-btn-circle {
+	   align-items: center;
+	   border-radius: 50%;
+	   display: inline-flex;
+	   justify-content: center;
+	   padding: 0;
+	   width: calc(2.25rem + 2px);
+	   height: calc(2.25rem + 2px);
+   
+   }
+   
+   .cus-btn-white{
+	   background-color: #fff;
+	   color: #1f1f1f;
+   }
+   .cus-btn-circle:hover{
+   background-color: #ff6f61;
+   color: #fff;
+   }
+
+   .card-actions{
+	   position: relative;
+	   /* transition: all .1s ease-in-out; */
+   }
+   .card:hover .card-actions{
+	   transform: translateY(-3.5rem);
+	   transition: all .1s ease-in-out;
+   
+   }
+   
+   .eye{
+	   position: relative;
+	   right: 0;
+	   left: 0;
+	   top: 0;
+	   opacity: 0;
+	   margin-left: 3.5rem;
+	   opacity:0;
+   
+   }
+   /* @media only screen and (min-width: 600px) {
+    .eye{
+      margin-left: 15%;
+ 
+     }
+   }  */
+  
+   /* @media only screen and (max-width: 600px) {
+    .eye{
+      margin-left: 15%;
+    }
+    }; */
+   
+   .card-img:hover .eye{
+	   opacity: 1;
+   } 
+   .card-img:hover .shop{
+	transition-delay: .3s;
+	   visibility: visible;
+   } 
+   .card-img:hover .heart{
+	   transition-delay: .2s;
+   
+	   opacity: 1;
+   }
+   .shop {
+	   margin-left: 4.5rem;
+	   /* transition: all .5s ease-in-out; */
+   /* transition-delay: .7s; */
+	   position: absolute;
+	   visibility: hidden;
+	   /* transition-delay: .15s; */
+   
+   } 
+   .heart {
+	   margin-left: 1rem;
+	   /* transition: all .5s ease-in-out; */
+	   /* transition-delay: .5s; */
+   
+	   opacity: 0;
+   
+	   /* transition-delay: .17s; */
+   
+   }
+
+@import "../node_modules/bootstrap/scss/bootstrap.scss";
+
+.my-modal{
+    background-color: rgba($color: #ffff, $alpha: 0.5)
+}
+
+.my-modal-img{
+
+
+    object-position: 50%;
+    object-fit: cover;
+}
+
+.active-border{
+    border-color: black !important;
+}
+
+
+.modal-close{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+
+.dropdown {
+    position: relative;
+    transition: all .2s ease-in-out;
+    transition-property: visibility,transform,opacity;
+}
+  .dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+  .dropdown:hover .dropdown-menu{
+    display: block;
+  }
+
+  .dropdown-menu ul {
+    list-style-type: none;
+    padding : 0;
+    margin : 0;
+  }
+
+  .dropdown-menu li {
+    padding: 5px;
+  }
+  
+  .dropdown-menu li:hover {
+    background-color: #ddd;
+  }
+  /* Responsive Styles */
+  @media (max-width: 767px) {
+    /* Styles for phones */
+    .dropdown {
+      position: relative;
+    }
+    .dropdown-menu {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      background-color: #ffffff;
+      z-index: 1;
+    }
+    .dropdown:hover .dropdown-menu {
+      display: block;
+    }
+    .dropdown-menu ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .dropdown-menu li {
+      padding: 8px;
+    }
+  }
+
+  @media (min-width: 768px) and (max-width: 1023px) {
+    /* Styles for tablets */
+    .dropdown {
+      /* Modify the styles for tablet screens */
+    }
+  }
+
+  .table-p{
+    padding: 1.5rem !important;
+  }
+
+  .active{
+    color : #ff6f61;
+  }
+
+.bg-pattern{
+  background-image: url("https://yevgenysim-turkey.github.io/shopper/assets/img/patterns/pattern-1.svg");
+}
+
+
+
+
+/* .parent{
+    position: relative;
+} */
+
+.dropdown {
+    position: relative;
+}
+
+.sticky {
+    position: sticky;
+    top: 0;
+}
+
+.scroll {
+    overflow-y: auto;
+}
+
+.right_side {
+    height: 2000px;
+
+    overflow-y: auto;
+}
+
+@media (max-width: 1199px){
+    .navbar.navbar-expand-xl .navbar-collapse:before {
+        content: "";
+        display: block;
+        margin-top: 0.5rem;
+    }
+}
+
+@media (min-width: 1199px){
+    .dropdown:hover .dropdown-menu{
+        display: block;
+    }
+}
+
+.nav-cart-noti::after{
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: 0;
+    color: white;
+    right: -11.01px;
+    border-radius: 50%;
+    background-color: #E66457;
+}
+
+.num{
+    right: -5px;
+    color: white;
+    z-index: 1;
+}
+
+.bg-nav-img{
+    background-image: url('./img/promo-bg.svg');
+}
+
+.bg-nav-dark{
+    opacity: 1;
+    background-color: #1f1e1e!important;
+}
+
